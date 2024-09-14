@@ -73,7 +73,7 @@ public class Main {
                     y = new int[n][n];
                     for (int i = 0; i < y.length; i++) {
                         for (int j = 0; j < y.length; j++) {
-                            y[i][j] = random.nextInt(100) - 50;
+                            y[i][j] = random.nextInt(10) - 5;
                         }
                     }
                 }

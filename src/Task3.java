@@ -8,33 +8,29 @@ public class Task3 {
     }
 
     public void method1() {
-        System.out.println("Початковий масив:");
-        for (int i = 0; i < array.length; i++) {
+        int rows = array.length;
+        int cols = array[0].length;
 
-            for (int j = 0; j < array[0].length; j++) {
+        System.out.println("Початковий масив:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 result[i][j] = array[i][j];
                 System.out.print(result[i][j] + " ");
-
             }
-
             System.out.println();
         }
-        for (int i = 0; i < array.length; i++) {
-            int sum = 0;
-            for (int j = 0; j < array[0].length; j++) {
-                sum += array[i][j];
-            }
-            result[i][array[0].length] = sum;
-        }
-        for (int i = 0; i < array.length; i++) {
-            int sum = 0;
-            for (int j = 0; j < array.length; j++) {
-                sum += array[j][i];
-            }
-            result[array.length][i] = sum;
-        }
-        System.out.println("Змінений масив:");
 
+        // Calculate row sums and column sums in a single loop
+        for (int i = 0; i < rows; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < cols; j++) {
+                rowSum += array[i][j];
+                result[rows][j] += array[i][j]; // Accumulate column sums
+            }
+            result[i][cols] = rowSum;
+        }
+
+        System.out.println("Змiнений масив:");
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < result[0].length; j++) {
                 System.out.print(result[i][j] + " ");
@@ -42,14 +38,13 @@ public class Task3 {
             System.out.println();
         }
 
-        for(int i=0;i<array.length;i++){
-            for(int j=0;j<array[0].length;j++){
-                if(array[i][j]==array[j][i]){
-                    System.out.println("Однакова сума елементів і стовпців: "+array[i][j]+"["+i+"] ["+j+"]");
-                    
+        for (int i = 0; i < cols; i++) {
+            for (int j = 0; j < rows; j++) {
+                if (result[rows][i] == result[j][cols]) {
+                    System.out.println("Однакова сума елементiв i стовпцiв: " + result[rows][i] + "["
+                            + j + "] [" + i + "]");
                 }
             }
         }
     }
-
 }
