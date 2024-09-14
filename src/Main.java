@@ -35,7 +35,7 @@ public class Main {
                     validInput = true;
                     x = new int[n];
                     for (int i = 0; i < x.length; i++) {
-                        x[i] = random.nextInt(100)-50; 
+                        x[i] = random.nextInt(100) - 50;
                     }
                 }
 
@@ -50,13 +50,43 @@ public class Main {
 
             }
         }
+        System.out.println("Завдання №2:");
         Task2 task2 = new Task2(a, b, x);
 
         System.out.println("Результат 1 методу(Sum(x[i],i<a)): " + task2.SumA());
         System.out.println("Результат 2 методу(Multiply(x[i],i>b)): " + task2.dobutB());
         System.out.println("Результат 3 методу(Min(x[i])): " + task2.min());
         System.out.println("Результат 4 методу(Min(x[i])): " + task2.max());
-        console.close();
 
+        System.out.println("Завдання №3:");
+        validInput = false;
+        int[][] y = null;
+        while (validInput == false) {
+            try {
+                System.out.println("Введiть розмір масиву(0<=n<200)): ");
+                int n = console.nextInt();
+                if (n <= 0 || n > 200) {
+                    validInput = false;
+                    throw new Exception("n Має належати проміжку [1;200]");
+                } else {
+                    validInput = true;
+                    y = new int[n][n];
+                    for (int i = 0; i < y.length; i++) {
+                        for (int j = 0; j < y.length; j++) {
+                            y[i][j] = random.nextInt(100) - 50;
+                        }
+                    }
+                }
+
+            } catch (Exception e) {
+                System.out.println("Помилка: " + e);
+            }
+
+            Task3 task3 = new Task3(y);
+            task3.method1();
+            console.close();
+
+        }
     }
+
 }
