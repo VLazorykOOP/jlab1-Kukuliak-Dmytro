@@ -84,9 +84,15 @@ public class Main {
 
             Task3 task3 = new Task3(y);
             task3.method1();
-            console.close();
 
         }
+        System.out.println("Завдання №4:");
+        String text = "In a distant galaxy, far beyond the reach of ordinary humans, there existed a planet named Alphabeta. This planet was unique in many ways, but most notably, it was home to a peculiar phenomenon. On Alphabeta, certain words were always arranged in alphabetical order. The inhabitants of this planet, known as Alphabians, took great pride in their linguistic heritage.Every day, the Alphabians would gather in the central square of their capital city, Lexiconia, to celebrate their love for words. They would recite poems, tell stories, and engage in lively debates, all while ensuring that their language remained pure and orderly. Words like abcde, ace, bde, efg, ghij, klm, mnop, qrst, uvw, and xyz were commonly used and cherished.One day, a young Alphabian named Zyx decided to embark on a journey to explore the far reaches of their planet. Zyx was fascinated by the idea of discovering new words and expanding their vocabulary. As Zyx traveled through the lush forests and towering mountains of Alphabeta, they encountered many new and wondrous sights. In the heart of the forest, Zyx stumbled upon an ancient library filled with books that contained words from long-forgotten languages. Zyx spent days poring over these texts, marveling at the beauty and complexity of the words they found. Among the many treasures in the library, Zyx discovered a book that contained a prophecy about a great linguistic revolution. According to the prophecy, a time would come when the Alphabians would need to embrace new words and ideas to ensure the survival of their language. Inspired by this revelation, Zyx returned to Lexiconia with a newfound sense of purpose. Zyx shared the prophecy with the other Alphabians, who were initially skeptical but eventually came to understand the importance of evolving their language.Together, the Alphabians began to incorporate new words into their vocabulary, blending the old with the new in a harmonious and orderly manner. They continued to cherish their linguistic heritage while also embracing the changes that would ensure the longevity of their language. And so, the Alphabians thrived, their love for words and their commitment to linguistic purity guiding them into a bright and prosperous future.";
+
+        Task4 task4 = new Task4(text);
+        task4.method1();
+        console.close();
+
     }
 
 }
